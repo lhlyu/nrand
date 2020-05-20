@@ -1,10 +1,9 @@
 package service
 
 import (
-    "github.com/lhlyu/nrand/controller/dto"
-    "github.com/lhlyu/nrand/result"
-    "github.com/lhlyu/nrand/service/gen"
-    "github.com/lhlyu/nrand/trace"
+	"github.com/lhlyu/nrand/controller/dto"
+	"github.com/lhlyu/nrand/service/gen"
+	"github.com/lhlyu/nrand/trace"
 )
 
 type IndexService struct {
@@ -17,13 +16,10 @@ func NewIndexService(tracker trace.ITracker) *IndexService {
 	}
 }
 
-func (s *IndexService) GenName(req *dto.NameDto) *result.R {
-    g := gen.GenFactory(req.Target)
-    if g == nil{
-        return result.Failure
-    }
-	return result.Success.WithData(g.Handler(req))
+func (s *IndexService) GenName(req *dto.NameDto) []string {
+	g := gen.GenFactory(req.Target)
+	if g == nil {
+		return nil
+	}
+	return g.Handler(req)
 }
-
-
-

@@ -38,9 +38,7 @@ func main() {
 		Done: iris.ExecutionOptions{Force: true},
 	})
 
-	// 静态资源
-	app.HandleDir("/", "static")
-
+	app.HandleDir("/", "./static")
 	router.SetRouter(app)
 
 	app.Run(iris.Addr(common.Cfg.GetString("server.host") + ":" + common.Cfg.GetString("server.port")))

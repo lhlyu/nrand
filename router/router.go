@@ -6,15 +6,8 @@ import (
 )
 
 func SetRouter(app *iris.Application) {
-	//app.AllowMethods(iris.MethodOptions)
-	//
-	//ctr := &controller.Controller{}
-	//
-	//
-	//app.Party("/api")
-
 	ctr := &controller.IndexController{}
 
-	app.Post("/name", controller.H(ctr.GenName))
+	app.Post("/api/name", controller.H(ctr.GenName))
 
 }

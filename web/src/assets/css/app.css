@@ -1,0 +1,13 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑', Helvetica, Arial, sans-serif;
+  /*background-image: url("http://img.netbian.com/file/2018/1226/48cf1dc1721dc2aeb67476f4d02928b0.jpg");*/
+  /*background: -webkit-linear-gradient(left, #fcfcfc , #727272);*/
+  /*background: -o-linear-gradient(right, #fcfcfc , #727272);*/
+  /*background: -moz-linear-gradient(right, #fcfcfc , #727272);*/
+  /*background: linear-gradient(to right, #fcfcfc , #727272);*/
+}
+#app{
+  padding: 20px;
+}
