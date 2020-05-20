@@ -13,6 +13,6 @@ server:
   limit: 15   # 每秒最多允许N个请求
 
 log:
-  level: debug
-  out: log/libra.log
+  level: info
+  out: log/nrand.log
 
